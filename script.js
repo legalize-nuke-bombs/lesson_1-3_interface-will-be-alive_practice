@@ -3,6 +3,7 @@
 
 const firstCard = document.querySelector('[data-event="talk"]');
 const labStatus = document.querySelector("#lab-status");
+const detailsTitle = document.querySelector("#details-title");
 
 const eventName = "Город в деталях";
 let clickCount = 0;
@@ -14,6 +15,7 @@ firstCard.addEventListener("click", () => {
   else {
     labStatus.textContent = `Повторное открытие: ${eventName}`;
   }
+  detailsTitle.textContent = eventName
 });
 
 // 02–03. Вы будете постепенно менять обработчик выше: добавите
