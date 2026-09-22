@@ -1,16 +1,15 @@
 "use strict";
 
-// Семинар 1-3. Идите по заданиям 01–10 из TASKS.md.
-// Не вставляйте готовый код целиком: после каждого шага проверьте страницу.
 
 const firstCard = document.querySelector('[data-event="talk"]');
 const labStatus = document.querySelector("#lab-status");
 
-// 01. Уберите /* и */ вокруг обработчика, сохраните файл и нажмите
-// первую карточку. Потом переходите к заданию 02 в TASKS.md.
+const eventName = "Город в деталях";
+let clickCount = 0;
 firstCard.addEventListener("click", () => {
-  labStatus.textContent = "Клик сработал. JavaScript подключен!";
-})
+  clickCount = clickCount + 1;
+  labStatus.textContent = `${eventName}: нажатий ${clickCount}`;
+});
 
 // 02–03. Вы будете постепенно менять обработчик выше: добавите
 // переменные, счетчик нажатий и условие. Не создавайте второй
